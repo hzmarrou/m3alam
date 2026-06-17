@@ -10,6 +10,8 @@
   --color-grey-5: #CAC9CF;
   --color-lime: #DAFF01;
   --color-link: #8142FF;
+  --eyebrow-on-light: #8142FF;
+  --eyebrow-on-dark: #AA80FF;
   --radius-sm: 10px;
   --radius-md: 14px;
   --radius-lg: 22px;
@@ -100,11 +102,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .eyebrow {
   margin: 0 0 14px;
-  color: var(--color-primary-light);
+  color: var(--eyebrow-on-light);
   font-size: .78rem;
   font-weight: 800;
   letter-spacing: .12em;
   text-transform: uppercase;
+}
+
+.hero-editorial .eyebrow,
+.hero-panel .eyebrow {
+  color: var(--eyebrow-on-dark);
 }
 
 .hero-title {

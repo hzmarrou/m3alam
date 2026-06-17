@@ -82,6 +82,17 @@ def decode_image(response_json: dict[str, object]) -> bytes:
     return base64.b64decode(item["b64_json"])
 
 
+def strip_image_payload(response_json: dict[str, object]) -> dict[str, object]:
+    sanitized = json.loads(json.dumps(response_json))
+    data = sanitized.get("data")
+    if isinstance(data, list):
+        for item in data:
+            if isinstance(item, dict):
+                item.pop("b64_json", None)
+                item.pop("b64Json", None)
+    return sanitized
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate M3alam service images via GPT-Image-2.")
     parser.add_argument("--env-file", default=str(DEFAULT_ENV_PATH))
@@ -130,7 +141,7 @@ def main() -> int:
             response = request_image(endpoint, api_key, args.deployment, args.api_version, prompt)
             image_bytes = decode_image(response)
             image_path.write_bytes(image_bytes)
-            metadata_path.write_text(json.dumps(response, indent=2), encoding="utf-8")
+            metadata_path.write_text(json.dumps(strip_image_payload(response), indent=2), encoding="utf-8")
             manifest.append({"service": slug, "status": "generated", "image_path": str(image_path)})
             print(f"Generated: {slug}")
         except (error.HTTPError, error.URLError, ValueError) as exc:

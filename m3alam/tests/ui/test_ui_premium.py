@@ -16,8 +16,8 @@ def test_home_uses_editorial_shell_and_service_images():
     response = Client().get("/")
     assert response.status_code == 200
     assert b"service-grid-editorial" in response.content
-    assert b"/static/images/services/plomberie.png" in response.content
-    assert b"/static/images/services/electricite.png" in response.content
+    assert b"/static/images/services/thumbs/plomberie.webp" in response.content
+    assert b"/static/images/services/thumbs/electricite.webp" in response.content
 
 
 def test_stylesheet_contains_editorial_design_tokens():
@@ -25,13 +25,29 @@ def test_stylesheet_contains_editorial_design_tokens():
     assert "--radius-md: 14px" in css
     assert ".hero-editorial" in css
     assert ".service-card-editorial" in css
+    assert "--eyebrow-on-light: #8142FF" in css
 
 
 def test_home_has_all_28_service_images():
     response = Client().get("/")
     assert response.status_code == 200
     assert response.content.count(b'class="service-card-editorial"') == 28
-    assert b"/static/images/services/transport.png" in response.content
+    assert b"/static/images/services/thumbs/transport.webp" in response.content
+    assert response.content.count(b'loading="lazy"') == 28
+    assert response.content.count(b'decoding="async"') == 28
+
+
+def test_static_service_metadata_does_not_publish_base64_payloads():
+    services_dir = Path("static/images/services")
+    for metadata_path in services_dir.glob("*.json"):
+        assert "b64_json" not in metadata_path.read_text(encoding="utf-8")
+
+
+def test_service_grid_uses_optimized_webp_thumbnails():
+    thumbs_dir = Path("static/images/services/thumbs")
+    thumbnails = list(thumbs_dir.glob("*.webp"))
+    assert len(thumbnails) == 28
+    assert all(path.stat().st_size < 80_000 for path in thumbnails)
 
 
 def test_forms_use_premium_form_panel():

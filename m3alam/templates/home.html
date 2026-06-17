@@ -35,7 +35,7 @@
 <section class="service-grid-editorial">
   {% for slug, label in service_categories %}
     <article class="service-card-editorial">
-      <img src="/static/images/services/{{ slug }}.png" alt="{{ label }}">
+      <img src="/static/images/services/thumbs/{{ slug }}.webp" alt="{{ label }}" loading="lazy" decoding="async">
       <h3>{{ label }}</h3>
     </article>
   {% endfor %}
