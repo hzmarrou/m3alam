@@ -37,6 +37,14 @@ def test_typography_scale_is_balanced_on_hero():
     assert 'style="' not in home
 
 
+def test_home_section_labels_are_larger_than_standard_eyebrows():
+    css = Path("static/css/theme.css").read_text(encoding="utf-8")
+    home = Path("templates/home.html").read_text(encoding="utf-8")
+    assert 'class="eyebrow eyebrow-section">Services</p>' in home
+    assert 'class="eyebrow eyebrow-section">Processus</p>' in home
+    assert "font-size: clamp(1.08rem, 1.35vw, 1.24rem)" in css
+
+
 def test_home_has_all_28_service_images():
     response = Client().get("/")
     assert response.status_code == 200

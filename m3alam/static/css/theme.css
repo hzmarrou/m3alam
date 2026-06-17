@@ -109,6 +109,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   text-transform: uppercase;
 }
 
+.eyebrow-section {
+  font-size: clamp(1.08rem, 1.35vw, 1.24rem);
+  letter-spacing: .07em;
+}
+
 .hero-editorial .eyebrow,
 .hero-panel .eyebrow {
   color: var(--eyebrow-on-dark);
