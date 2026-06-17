@@ -2,13 +2,25 @@
 
 Marketplace de mise en relation entre clients et artisans au Maroc, avec une interface en français et un portail de supervision admin.
 
-## Démarrage rapide
+## Exécution locale
+
+### Prérequis
+- Python 3.11+
+- Git
+
+### Lancer l'application en local (Windows PowerShell)
 
 ```powershell
-cd m3alam
+git clone https://github.com/hzmarrou/m3alam.git
+cd m3alam\m3alam
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver 127.0.0.1:8010
 ```
+
+Ouvrir ensuite : `http://127.0.0.1:8010/`
 
 ## Parcours des personas
 
@@ -28,4 +40,3 @@ python manage.py runserver 127.0.0.1:8010
 1. Superviser la plateforme (`/portail-admin/`)
 2. Masquer une demande non conforme (`/portail-admin/masquer-travail/<job_id>/`)
 3. Suspendre un utilisateur (`/portail-admin/suspendre-utilisateur/<user_id>/`)
-
