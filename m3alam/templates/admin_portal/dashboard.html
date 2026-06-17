@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Portail Admin</h1>
+<p>Utilisateurs: {{ users_count }}</p>
+<p>Artisans: {{ artisans_count }}</p>
+<p>Demandes ouvertes: {{ jobs_open }}</p>
+
+<h2>Actions rapides</h2>
+<p>Pour masquer un travail: <code>/portail-admin/masquer-travail/&lt;id&gt;/</code></p>
+<p>Pour suspendre un utilisateur: <code>/portail-admin/suspendre-utilisateur/&lt;id&gt;/</code></p>
+
+<h2>Derniers logs</h2>
+<ul>
+  {% for log in logs %}
+    <li>{{ log.created_at }} — {{ log.action_type }} {{ log.target_type }} #{{ log.target_id }}</li>
+  {% empty %}
+    <li>Aucune action.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

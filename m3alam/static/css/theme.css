@@ -1,0 +1,62 @@
+:root {
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-grey-1: #29282A;
+  --color-creme: #F7F6F9;
+  --color-primary: #8142FF;
+  --color-primary-light: #AA80FF;
+  --color-grey-3: #706D72;
+  --color-grey-2: #434045;
+  --color-grey-5: #CAC9CF;
+  --color-lime: #DAFF01;
+  --color-link: #8142FF;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: var(--color-grey-1);
+  background: var(--color-creme);
+}
+
+header {
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-grey-5);
+  padding: 1rem 2rem;
+}
+
+nav a {
+  color: var(--color-link);
+  margin-right: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 1.5rem auto;
+  background: var(--color-white);
+  padding: 1.2rem;
+  border-radius: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.55rem 0.9rem;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: var(--color-primary-light);
+}
+
+input, textarea, select {
+  width: 100%;
+  margin: 0.25rem 0 0.9rem;
+  padding: 0.55rem;
+}

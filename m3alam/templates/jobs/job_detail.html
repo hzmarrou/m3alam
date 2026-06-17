@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ job.title }}</h1>
+<p><strong>Catégorie:</strong> {{ job.category }}</p>
+<p><strong>Ville:</strong> {{ job.city }}</p>
+<p><strong>Description:</strong> {{ job.description }}</p>
+<p><strong>Statut:</strong> {{ job.get_status_display }}</p>
+
+{% if user.is_authenticated and user.role == "artisan" and job.status == "open" %}
+  <a class="btn" href="/offres/creer/{{ job.id }}/">Envoyer une offre</a>
+{% endif %}
+
+<h2>Offres</h2>
+<ul>
+  {% for offer in job.offers.all %}
+    <li>
+      {{ offer.artisan.email }} - {{ offer.proposed_price }} MAD - {{ offer.get_status_display }}
+      {% if user.is_authenticated and user == job.client and offer.status == "pending" %}
+        <a class="btn btn-secondary" href="/offres/accepter/{{ offer.id }}/">Accepter</a>
+      {% endif %}
+      {% if user.is_authenticated and user == offer.artisan %}
+        <a class="btn btn-secondary" href="/offres/contact-client/{{ offer.id }}/">Voir contact client</a>
+      {% endif %}
+    </li>
+  {% empty %}
+    <li>Aucune offre encore.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

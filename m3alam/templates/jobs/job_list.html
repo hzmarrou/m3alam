@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Demandes ouvertes</h1>
+{% if jobs %}
+  <ul>
+    {% for job in jobs %}
+      <li>
+        <a href="/travaux/{{ job.id }}/">{{ job.title }}</a> — {{ job.city }} — {{ job.category }}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>Aucune demande pour le moment.</p>
+{% endif %}
+{% endblock %}

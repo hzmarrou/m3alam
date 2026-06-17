@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M3alam - Plateforme artisans</title>
+  <link rel="stylesheet" href="{% static 'css/theme.css' %}">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Accueil</a>
+      <a href="/travaux/">Demandes</a>
+      <a href="/travaux/nouveau/">Publier un travail</a>
+      {% if user.is_authenticated %}
+        <a href="/comptes/deconnexion/">Déconnexion</a>
+      {% else %}
+        <a href="/comptes/connexion/">Connexion</a>
+      {% endif %}
+      <a href="/portail-admin/">Portail admin</a>
+    </nav>
+  </header>
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

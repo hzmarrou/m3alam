@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Envoyer une offre</h1>
+<p><strong>Travail:</strong> {{ job.title }} ({{ job.city }})</p>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button class="btn" type="submit">Envoyer mon offre</button>
+</form>
+{% endblock %}

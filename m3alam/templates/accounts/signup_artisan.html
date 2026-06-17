@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Inscription artisan</h1>
+<p>Après inscription, validez email/téléphone depuis votre profil.</p>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button class="btn" type="submit">Créer mon compte artisan</button>
+</form>
+{% endblock %}
