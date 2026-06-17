@@ -8,7 +8,7 @@ lang: fr
 
 ## Marketplace artisans · Maroc
 
-Une plateforme française-first pour publier une demande de travaux, recevoir des offres claires et choisir un artisan fiable.
+Une plateforme pour publier une demande de travaux, recevoir des offres claires et choisir un artisan fiable.
 
 **Capture à ajouter :** page d'accueil — `http://127.0.0.1:8010/`
 
