@@ -28,6 +28,15 @@ def test_stylesheet_contains_editorial_design_tokens():
     assert "--eyebrow-on-light: #8142FF" in css
 
 
+def test_typography_scale_is_balanced_on_hero():
+    css = Path("static/css/theme.css").read_text(encoding="utf-8")
+    home = Path("templates/home.html").read_text(encoding="utf-8")
+    assert "font-size: clamp(.9rem, 1vw, 1rem)" in css
+    assert "font-size: clamp(2.3rem, 4.7vw, 4rem)" in css
+    assert "hero-panel-title" in css
+    assert 'style="' not in home
+
+
 def test_home_has_all_28_service_images():
     response = Client().get("/")
     assert response.status_code == 200
