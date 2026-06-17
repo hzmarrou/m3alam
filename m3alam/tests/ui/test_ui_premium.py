@@ -59,6 +59,13 @@ def test_service_grid_uses_optimized_webp_thumbnails():
     assert all(path.stat().st_size < 80_000 for path in thumbnails)
 
 
+def test_service_images_fill_card_placeholders_better():
+    css = Path("static/css/theme.css").read_text(encoding="utf-8")
+    assert "aspect-ratio: 1 / .88" in css
+    assert "transform: scale(1.14)" in css
+    assert "padding: 2px" in css
+
+
 def test_forms_use_premium_form_panel():
     for path in ["/comptes/connexion/", "/comptes/inscription-client/"]:
         response = Client().get(path)

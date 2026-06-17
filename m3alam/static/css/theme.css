@@ -194,7 +194,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .service-card-editorial {
-  min-height: 220px;
+  min-height: 238px;
   background: var(--color-white);
   border: 1px solid rgba(202,201,207,.72);
   border-radius: var(--radius-md);
@@ -214,11 +214,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .service-card-editorial img {
   width: 100%;
-  aspect-ratio: 1 / .72;
+  aspect-ratio: 1 / .88;
   object-fit: contain;
   background: var(--color-creme);
   border-radius: var(--radius-sm);
-  padding: 10px;
+  padding: 2px;
+  transform: scale(1.14);
+  transform-origin: center;
 }
 
 .service-card-editorial h3 { margin: 14px 0 0; font-size: 1rem; letter-spacing: -.02em; }
