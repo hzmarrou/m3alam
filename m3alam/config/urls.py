@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.views.generic import TemplateView
+from jobs.service_catalog import SERVICE_CATEGORIES
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('', TemplateView.as_view(template_name='home.html', extra_context={'service_categories': SERVICE_CATEGORIES}), name='home'),
     path('comptes/', include('accounts.urls')),
     path('travaux/', include('jobs.urls')),
     path('offres/', include('offers.urls')),

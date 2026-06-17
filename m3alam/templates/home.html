@@ -1,7 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Bienvenue sur M3alam</h1>
-<p>Plateforme marocaine en français pour connecter clients et artisans.</p>
-<a class="btn" href="/comptes/inscription-client/">Je suis client</a>
-<a class="btn btn-secondary" href="/comptes/inscription-artisan/">Je suis artisan</a>
+<section class="hero-editorial">
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">Marketplace artisans · Maroc</p>
+      <h1 class="hero-title">Des artisans fiables, sélectionnés pour vos travaux.</h1>
+      <p class="hero-sub">Publiez votre besoin en français, recevez des offres claires, puis choisissez l’artisan adapté à votre projet.</p>
+      <p style="margin-top:28px;">
+        <a class="btn btn-primary" href="/travaux/nouveau/">Publier ma demande</a>
+      </p>
+    </div>
+    <aside class="hero-panel">
+      <p class="eyebrow">Pourquoi M3alam</p>
+      <h2 style="margin:0;letter-spacing:-.04em;">Un service cadré, clair et local.</h2>
+      <p class="hero-sub" style="font-size:.98rem;">Profils artisans, demandes structurées et coordonnées débloquées après acceptation.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="trust-bar-editorial">
+  <div class="trust-item"><strong>Artisans vérifiés</strong><span>Profils et compétences mieux cadrés.</span></div>
+  <div class="trust-item"><strong>Réponse rapide</strong><span>Demandes visibles par catégorie et ville.</span></div>
+  <div class="trust-item"><strong>Expérience suivie</strong><span>Portail admin et modération intégrés.</span></div>
+</section>
+
+<section class="section-head">
+  <div>
+    <p class="eyebrow">Services</p>
+    <h2 class="section-title">Choisissez le métier qui correspond à votre besoin.</h2>
+  </div>
+  <p class="section-copy">Chaque catégorie dispose d’une image dédiée générée pour garder une expérience visuelle homogène et premium.</p>
+</section>
+
+<section class="service-grid-editorial">
+  {% for slug, label in service_categories %}
+    <article class="service-card-editorial">
+      <img src="/static/images/services/{{ slug }}.png" alt="{{ label }}">
+      <h3>{{ label }}</h3>
+    </article>
+  {% endfor %}
+</section>
+
+<section class="section-head">
+  <div>
+    <p class="eyebrow">Processus</p>
+    <h2 class="section-title">Simple pour le client, clair pour l’artisan.</h2>
+  </div>
+</section>
+<section class="editorial-grid">
+  <article class="panel-editorial"><span class="badge">01</span><h3>Décrivez la demande</h3><p class="muted">Catégorie, ville, budget éventuel et contexte des travaux.</p></article>
+  <article class="panel-editorial"><span class="badge">02</span><h3>Recevez des offres</h3><p class="muted">Les artisans répondent avec un prix et un message clair.</p></article>
+  <article class="panel-editorial"><span class="badge">03</span><h3>Acceptez une offre</h3><p class="muted">Les coordonnées sont débloquées uniquement après acceptation.</p></article>
+</section>
 {% endblock %}

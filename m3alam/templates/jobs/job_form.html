@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Publier une demande de travaux</h1>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button class="btn" type="submit">Publier</button>
-</form>
+<section class="form-panel-editorial">
+  <p class="eyebrow">Nouvelle demande</p>
+  <h1 class="section-title">Publier une demande de travaux</h1>
+  <p class="muted">Décrivez votre besoin. Les artisans vous envoient des offres.</p>
+  <form method="post" class="form-stack">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary" type="submit">Publier</button>
+  </form>
+</section>
 {% endblock %}

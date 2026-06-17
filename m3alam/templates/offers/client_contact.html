@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Coordonnées du client</h1>
-<p><strong>Email:</strong> {{ offer.job.client.email }}</p>
-<p><strong>Téléphone:</strong> {{ offer.job.client.phone }}</p>
+<section class="form-panel-editorial">
+  <p class="eyebrow">Offre acceptée</p>
+  <h1 class="section-title">Coordonnées du client</h1>
+  <p><strong>Email:</strong> {{ offer.job.client.email }}</p>
+  <p><strong>Téléphone:</strong> {{ offer.job.client.phone }}</p>
+</section>
 {% endblock %}

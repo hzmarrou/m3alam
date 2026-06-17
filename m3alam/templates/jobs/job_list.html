@@ -1,15 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Demandes ouvertes</h1>
-{% if jobs %}
-  <ul>
-    {% for job in jobs %}
-      <li>
-        <a href="/travaux/{{ job.id }}/">{{ job.title }}</a> — {{ job.city }} — {{ job.category }}
-      </li>
-    {% endfor %}
-  </ul>
-{% else %}
-  <p>Aucune demande pour le moment.</p>
-{% endif %}
+<section class="page-header-editorial">
+  <p class="eyebrow">Demandes</p>
+  <h1 class="section-title">Demandes ouvertes</h1>
+  <p class="muted">Parcourez les travaux disponibles et répondez avec une offre claire.</p>
+</section>
+<section class="cards">
+  {% for job in jobs %}
+    <article class="job-card-editorial">
+      <span class="badge">{{ job.get_status_display }}</span>
+      <h3 class="job-title">{{ job.title }}</h3>
+      <p class="muted">{{ job.city }} • {{ job.category }}</p>
+      <a class="btn btn-secondary" href="/travaux/{{ job.id }}/">Voir la demande</a>
+    </article>
+  {% empty %}
+    <div class="empty-state-editorial" data-empty-state><p>Aucune demande pour le moment.</p></div>
+  {% endfor %}
+</section>
 {% endblock %}

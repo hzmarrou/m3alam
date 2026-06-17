@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Inscription client</h1>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button class="btn" type="submit">Créer mon compte client</button>
-</form>
+<section class="form-panel-editorial">
+  <p class="eyebrow">Espace client</p>
+  <h1 class="section-title">Inscription client</h1>
+  <p class="muted">Créez votre compte pour publier et suivre vos demandes de travaux.</p>
+  <form method="post" class="form-stack">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary" type="submit">Créer mon compte client</button>
+  </form>
+</section>
 {% endblock %}

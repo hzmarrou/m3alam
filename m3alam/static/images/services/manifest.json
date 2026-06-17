@@ -1,0 +1,144 @@
+{
+  "results": [
+    {
+      "service": "ascenseurs",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\ascenseurs.png"
+    },
+    {
+      "service": "carrelage",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\carrelage.png"
+    },
+    {
+      "service": "clim-et-froid",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\clim-et-froid.png"
+    },
+    {
+      "service": "demolition",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\demolition.png"
+    },
+    {
+      "service": "depannage",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\depannage.png"
+    },
+    {
+      "service": "electricite",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\electricite.png"
+    },
+    {
+      "service": "electricite-auto",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\electricite-auto.png"
+    },
+    {
+      "service": "electro-menager",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\electro-menager.png"
+    },
+    {
+      "service": "electronique",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\electronique.png"
+    },
+    {
+      "service": "encadrement",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\encadrement.png"
+    },
+    {
+      "service": "etancheite",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\etancheite.png"
+    },
+    {
+      "service": "ferronnerie",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\ferronnerie.png"
+    },
+    {
+      "service": "jardinier",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\jardinier.png"
+    },
+    {
+      "service": "maconnerie",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\maconnerie.png"
+    },
+    {
+      "service": "marbre",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\marbre.png"
+    },
+    {
+      "service": "mecanique",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\mecanique.png"
+    },
+    {
+      "service": "menuiserie",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\menuiserie.png"
+    },
+    {
+      "service": "parabole",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\parabole.png"
+    },
+    {
+      "service": "peinture",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\peinture.png"
+    },
+    {
+      "service": "piscine",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\piscine.png"
+    },
+    {
+      "service": "platrier",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\platrier.png"
+    },
+    {
+      "service": "plomberie",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\plomberie.png"
+    },
+    {
+      "service": "pneumatiques",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\pneumatiques.png"
+    },
+    {
+      "service": "serrurerie",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\serrurerie.png"
+    },
+    {
+      "service": "surveillance-et-alarmes",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\surveillance-et-alarmes.png"
+    },
+    {
+      "service": "tapisserie",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\tapisserie.png"
+    },
+    {
+      "service": "transport",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\transport.png"
+    },
+    {
+      "service": "vitrerie-aluminium",
+      "status": "generated",
+      "image_path": "C:\\Users\\hzmarrou\\OneDrive\\python\\learning\\.worktrees\\m3alam-fr-marketplace\\m3alam\\static\\images\\services\\vitrerie-aluminium.png"
+    }
+  ]
+}

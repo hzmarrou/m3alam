@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Connexion</h1>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button class="btn" type="submit">Se connecter</button>
-</form>
+<section class="form-panel-editorial">
+  <p class="eyebrow">Accès sécurisé</p>
+  <h1 class="section-title">Connexion</h1>
+  <form method="post" class="form-stack">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary" type="submit">Se connecter</button>
+  </form>
+</section>
 {% endblock %}

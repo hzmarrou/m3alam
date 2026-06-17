@@ -1,29 +1,34 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>{{ job.title }}</h1>
-<p><strong>Catégorie:</strong> {{ job.category }}</p>
-<p><strong>Ville:</strong> {{ job.city }}</p>
-<p><strong>Description:</strong> {{ job.description }}</p>
-<p><strong>Statut:</strong> {{ job.get_status_display }}</p>
+<section class="page-header-editorial">
+  <p class="eyebrow">Détail demande</p>
+  <h1 class="job-title">{{ job.title }}</h1>
+  <p class="muted"><strong>Catégorie:</strong> {{ job.category }}</p>
+  <p class="muted"><strong>Ville:</strong> {{ job.city }}</p>
+  <p><strong>Description:</strong> {{ job.description }}</p>
+  <p><span class="badge">{{ job.get_status_display }}</span></p>
 
-{% if user.is_authenticated and user.role == "artisan" and job.status == "open" %}
-  <a class="btn" href="/offres/creer/{{ job.id }}/">Envoyer une offre</a>
-{% endif %}
+  {% if user.is_authenticated and user.role == "artisan" and job.status == "open" %}
+    <a class="btn btn-primary" href="/offres/creer/{{ job.id }}/">Envoyer une offre</a>
+  {% endif %}
+</section>
 
-<h2>Offres</h2>
-<ul>
+<h2 class="section-title">Offres</h2>
+<section class="cards">
   {% for offer in job.offers.all %}
-    <li>
-      {{ offer.artisan.email }} - {{ offer.proposed_price }} MAD - {{ offer.get_status_display }}
+    <article class="job-card-editorial">
+      <span class="badge">{{ offer.get_status_display }}</span>
+      <p><strong>{{ offer.artisan.email }}</strong></p>
+      <p class="muted">{{ offer.proposed_price }} MAD</p>
       {% if user.is_authenticated and user == job.client and offer.status == "pending" %}
         <a class="btn btn-secondary" href="/offres/accepter/{{ offer.id }}/">Accepter</a>
       {% endif %}
       {% if user.is_authenticated and user == offer.artisan %}
         <a class="btn btn-secondary" href="/offres/contact-client/{{ offer.id }}/">Voir contact client</a>
       {% endif %}
-    </li>
+    </article>
   {% empty %}
-    <li>Aucune offre encore.</li>
+    <div class="empty-state-editorial" data-empty-state><p>Aucune offre encore.</p></div>
   {% endfor %}
-</ul>
+</section>
 {% endblock %}

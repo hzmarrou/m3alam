@@ -1,20 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Portail Admin</h1>
-<p>Utilisateurs: {{ users_count }}</p>
-<p>Artisans: {{ artisans_count }}</p>
-<p>Demandes ouvertes: {{ jobs_open }}</p>
+<section class="page-header-editorial">
+  <p class="eyebrow">Administration</p>
+  <h1 class="section-title">Portail Admin</h1>
+  <p class="muted">Supervision rapide des comptes, artisans et demandes ouvertes.</p>
+</section>
+<section class="cards">
+  <article class="admin-kpi"><h3>Utilisateurs</h3><p class="job-title">{{ users_count }}</p></article>
+  <article class="admin-kpi"><h3>Artisans</h3><p class="job-title">{{ artisans_count }}</p></article>
+  <article class="admin-kpi"><h3>Demandes ouvertes</h3><p class="job-title">{{ jobs_open }}</p></article>
+</section>
 
-<h2>Actions rapides</h2>
-<p>Pour masquer un travail: <code>/portail-admin/masquer-travail/&lt;id&gt;/</code></p>
-<p>Pour suspendre un utilisateur: <code>/portail-admin/suspendre-utilisateur/&lt;id&gt;/</code></p>
+<h2 class="section-title">Actions rapides</h2>
+<section class="panel-editorial">
+  <p>Pour masquer un travail: <code>/portail-admin/masquer-travail/&lt;id&gt;/</code></p>
+  <p>Pour suspendre un utilisateur: <code>/portail-admin/suspendre-utilisateur/&lt;id&gt;/</code></p>
+</section>
 
-<h2>Derniers logs</h2>
-<ul>
-  {% for log in logs %}
-    <li>{{ log.created_at }} — {{ log.action_type }} {{ log.target_type }} #{{ log.target_id }}</li>
-  {% empty %}
-    <li>Aucune action.</li>
-  {% endfor %}
-</ul>
+<h2 class="section-title">Derniers logs</h2>
+<section class="panel-editorial">
+  <ul>
+    {% for log in logs %}
+      <li>{{ log.created_at }} — {{ log.action_type }} {{ log.target_type }} #{{ log.target_id }}</li>
+    {% empty %}
+      <li>Aucune action.</li>
+    {% endfor %}
+  </ul>
+</section>
 {% endblock %}
